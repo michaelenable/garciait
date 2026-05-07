@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>garciait.com</title>
+<meta name="theme-color" content="#0a0a0f">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+
+  :root {
+    --bg: #0a0a0f;
+    --bg-panel: #12121a;
+    --bg-card: #1a1a26;
+    --bg-hover: #222233;
+    --border: #2a2a3a;
+    --text: #e0e0e8;
+    --text-dim: #6a6a7a;
+    --text-muted: #444458;
+    --accent: #ff6b35;
+    --accent-glow: rgba(255, 107, 53, 0.3);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { height: 100%; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    margin-bottom: 48px;
+  }
+
+  .brand {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+  }
+
+  .sub {
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.5px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+  }
+
+  .card {
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 20px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.18s, background 0.18s, transform 0.18s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+    background: var(--bg-hover);
+    transform: translateY(-2px);
+  }
+
+  .card:hover .card-title { color: var(--accent); }
+
+  .card-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text);
+    margin-bottom: 10px;
+    transition: color 0.18s;
+  }
+
+  .card-desc {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 14px;
+    min-height: 42px;
+  }
+
+  .card-url {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    word-break: break-all;
+  }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 40px 18px; }
+    h1 { font-size: 26px; }
+    .card-desc { min-height: 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">garcia.it</div>
+      <h1>Apps</h1>
+      <div class="sub">Personal projects, all in one place.</div>
+    </header>
+
+    <main class="grid">
+      <a class="card" href="https://money.garciait.com/">
+        <div class="card-title">Money</div>
+        <div class="card-desc">Personal finance dashboard.</div>
+        <div class="card-url">money.garciait.com</div>
+      </a>
+
+      <a class="card" href="https://tnp.garciait.com/">
+        <div class="card-title">TNP</div>
+        <div class="card-desc">Tuesday Night Poker.</div>
+        <div class="card-url">tnp.garciait.com</div>
+      </a>
+
+      <a class="card" href="https://lyrics.garciait.com/">
+        <div class="card-title">Lyrics</div>
+        <div class="card-desc">Live performance teleprompter with tap-sync timing.</div>
+        <div class="card-url">lyrics.garciait.com</div>
+      </a>
+
+      <a class="card" href="https://family.garciait.com/">
+        <div class="card-title">Family</div>
+        <div class="card-desc">Family planner.</div>
+        <div class="card-url">family.garciait.com</div>
+      </a>
+    </main>
+
+    <footer>
+      &copy; garcia.it
+    </footer>
+  </div>
+</body>
+</html>
